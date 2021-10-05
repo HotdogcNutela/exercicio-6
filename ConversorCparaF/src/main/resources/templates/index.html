@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title th:text="#{index.title.text}">Conversor de Graus Celsius para Fahrenheit</title>
+    </head>
+
+    <body>
+        <h1 th:text="#{index.subtitle.text}">Converter</h1>
+
+        <form action="#" th:action="@{/results}" th:object="${initialValues}" method="POST">
+            <label for="min" th:text="#{index.min.text}">
+                Valor Mínimo:
+            </label>
+            <p>
+                <input type="text" id="min" placeholder="-100" th:value="${minValue}" th:field="*{minValue}" name="minValue" />
+            </p>
+            
+        </form>
+    </body>
+</html>
